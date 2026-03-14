@@ -5,7 +5,7 @@ crash.log
 terraform.tfstate.backup
 .terraform/
 .terraform.lock.hcl
-
+terraform.tfvars
 # Local override files
 override.tf
 override.tf.json
@@ -16,9 +16,11 @@ override.tf.json
 *.pem
 *.key
 *.p12
+*.json
 
 # IDE/editor
 .vscode/
 *.swp
 *.swo
 .DS_Store
+
