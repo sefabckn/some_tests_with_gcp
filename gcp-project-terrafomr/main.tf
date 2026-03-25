@@ -1,3 +1,5 @@
+# main.tf
+
 terraform {
   required_version = ">= 1.5"
   required_providers {
@@ -18,6 +20,12 @@ resource "google_project" "streamtalk" {
   name            = "StreamTalk Analytics"
   project_id      = var.project_id
   billing_account = var.billing_account_id
+}
+
+resource "google_project_iam_member" "owner" {
+  project = google_project.streamtalk.project_id
+  role    = "roles/owner"
+  member  = "user:afesbckn@gmail.com"
 }
 
 # ── Activate BigQuery API on the new project ───────────

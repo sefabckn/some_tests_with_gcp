@@ -1,4 +1,4 @@
-
+# variables.tf
 
 variable "project_id" {
   description = "GCP project ID to create — must be globally unique"
